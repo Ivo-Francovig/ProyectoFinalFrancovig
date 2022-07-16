@@ -1,0 +1,18 @@
+{% extends "AppFinal/padre.html" %}
+{% load static %}
+{% block contenidoQueCambia %}
+<h3>Borrar experiencias</h3>
+    
+    <form method="post">{% csrf_token %}
+        ¿Estás seguro que deseas borrar la experiencia:</br>
+         "{{ object }}"?</br></br>
+        <input type="submit" value="Confirmar" />
+    </form>
+    </br>
+    <a href="{% url 'List' %}">Regresar</a>
+
+{% endblock %}
+
+
+
+

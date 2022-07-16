@@ -1,0 +1,17 @@
+{% extends "AppFinal/padre.html" %}
+{% load static %}
+
+{% block contenidoQueCambia %}
+<form action="{% url 'busqueda' %}" method="GET">
+    <h3>Buscar habilidades por nivel</h3>
+</br>
+    <input type="text" name="nivel" placeholder="Inicial/Intermedio/Avanzado" id="nivel">
+    <input type="submit" value="Buscar">
+</form>
+</br>
+
+{% endblock %}
+
+{% block section_name %}
+<h3>Buscar habilidades por nivel</h3>
+{% endblock %}

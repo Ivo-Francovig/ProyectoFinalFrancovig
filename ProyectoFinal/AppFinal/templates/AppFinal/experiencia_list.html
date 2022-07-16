@@ -1,0 +1,22 @@
+{% extends "AppFinal/padre.html" %}
+{% load static %}
+{% block contenidoQueCambia %}
+<h3>Lista de experiencias profesionales</h3>
+    
+    <ul>
+        {% for x in object_list %}
+            <li>
+                <p>Empresa: {{ x.empresa }} </p>
+                <p> 
+                    <a href="{% url 'Detail' x.id %}">Ver</a> | 
+                    <a href="{% url 'Edit' x.id %}">Editar</a> | 
+                    <a href="{% url 'Delete' x.id %}">Borrar</a> 
+                    
+                </p> 
+            </li>
+
+        {% endfor %}
+    </ul>
+    <a href="{% url 'New'  %}">Nuevo</a> | 
+
+{% endblock %}

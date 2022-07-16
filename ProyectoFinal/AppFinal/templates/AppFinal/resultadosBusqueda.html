@@ -1,0 +1,21 @@
+{% extends "AppFinal/padre.html" %}
+{% load static %}
+
+{% block contenidoQueCambia %}
+    <h1>Buscar competencias por nivel</h1>
+    {% if skills %}
+    <ul>
+        {% for x in skills %}
+        <li>{{x.software}}</li>
+        <li>Nivel: {{x.nivel}}</li>
+        <br>
+        {% endfor %}
+    </ul>
+    {% endif %}
+</form>
+
+{% endblock %}
+
+{% block section_name %}
+<h3>Resultado de su busqueda</h3>
+{% endblock %} 

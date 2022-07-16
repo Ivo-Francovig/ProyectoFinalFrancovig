@@ -1,0 +1,15 @@
+{% extends "AppFinal/padre.html" %}
+{% load static %}
+{% block contenidoQueCambia %}
+<h3>Login</h3>
+    
+<body>
+    <form action="" method="POST">{%csrf_token%}
+        
+        {{form.as_p}}
+
+       <button type="submit"> Iniciar Sesión</button>
+       <button><a href="register">Si no tiene usuario, puede registrarse.</a></button>
+</body>
+
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends "AppFinal/padre.html" %}
+{% load static %}
+{% block contenidoQueCambia %}
+<h3>Leer profesionales</h3>
+<body>
+{% for x in profesionales %}
+    <li>{{x}}</li>
+    <button>
+        <a href="{% url 'eliminarProfesionales' x.nombre %}"> - Eliminar</a>
+        <a href="{% url 'editarProfesionales' x.nombre %}"> - Eliminar</a>
+    </button>
+{% endfor %}
+<br>
+<br>
+<a href="profesionalFormulario">Agregar otro profesional</a>
+</body>
+{% endblock %}

@@ -1,0 +1,20 @@
+{% extends "AppFinal/padre.html" %}
+{% load static %}
+
+{% block contenidoQueCambia %}
+<form action="{% url 'formularioFormacion' %}" method="POST">{% csrf_token %}
+    <h3>Ingrese los datos del curso o carrera</h3>
+</br>
+    <table>
+        {{miFormulario.as_table}}
+    </table>
+    </br>
+    <input type="submit" value="Guardar">
+</form>
+</br>
+
+{% endblock %}
+
+{% block section_name %}
+<h3>Formulario de formacion academica</h3>
+{% endblock %}

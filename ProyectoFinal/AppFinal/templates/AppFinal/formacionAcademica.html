@@ -1,0 +1,16 @@
+{% extends "AppFinal/padre.html" %}
+{% load static %}
+{% block contenidoQueCambia %}
+<h3>Formacion académica</h3>
+<p>
+{% for x in formaciones reversed %}
+    </br>
+    {{x.institucion}}</br>
+    {{x.nombreCurso}}</br>
+    {{x.fechaInicial}} - {{x.fechaFinal}}</br>
+    Estado: {{x.estado}}</br>
+    Proyecto final: {{x.proyectoFinal}}</br>
+
+{% endfor %}
+</p>
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends "AppFinal/padre.html" %}
+{% load static %}
+{% block contenidoQueCambia %}
+<h3>Detalles de experiencias</h3>
+<ul>
+    <p>Nombre de la empresa: <i>{{object.empresa}}</i></p>
+    <p>Puesto: <i>{{object.puesto}}</i></p>
+    <p>Fecha inicial: <i>{{object.fechaInicial}}</i></p>
+    <p>Fecha final: <i>{{object.fechaFinal}}</i></p>
+    <p>Descripcion: <i>{{object.descripcion}}</i></p>
+    <p>Referencia: <i>{{object.referencia}}</i></p>
+    <p>Telefono referencia: <i>{{object.telefonoReferencia}}</i></p>
+
+    <p>
+        <a href="{% url 'List' %}">Regresar</a>
+    </p>
+</ul>
+{% endblock %}

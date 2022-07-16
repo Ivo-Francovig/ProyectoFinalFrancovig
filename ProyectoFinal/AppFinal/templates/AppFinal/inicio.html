@@ -1,0 +1,11 @@
+{% extends "AppFinal/padre.html" %}
+{% load static %}
+{% block contenidoQueCambia %}
+<h3>Pagina de Inicio</h3>
+
+<h1 style="background-color:rgb(39, 238, 39);">{{mensaje}}</h1>
+
+<br>
+<button><a href="{% url 'logout' %}">Salir de la sesión</a></button>
+
+{% endblock %}
